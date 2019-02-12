@@ -1,4 +1,4 @@
-package spring.doodle.cluod.gretting;
+package spring.doodle.cluod.greeting;
 
 import java.util.Map;
 
