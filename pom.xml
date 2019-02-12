@@ -26,10 +26,8 @@
 		<module>greeting-cloud</module>
 		<module>name-cloud</module>
 		<module>web-cloud</module>
-		<!--
-		<module>eureka-server</module>
-		<module>service-hi</module>
-		-->
+		<module>eureka-server-cloud</module>
+		<module>config-server-cloud</module>
 	</modules>
     
 	<dependencies>

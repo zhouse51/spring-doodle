@@ -9,47 +9,30 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 	
-	<groupId>spring.doodle</groupId>
-	<artifactId>name-cloud</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>spring.doodle.cloud.eureka</groupId>
+	<artifactId>eureka-server-cloud</artifactId>
+	<version>0.0.1-eureka-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
-	<name>name-cloud</name>
-	<description>Demo project for Spring cloud</description>
+	<name>eureka-server-cloud</name>
+	<description>Demo project for eureka server</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<spring-cloud.version>2.1.0.RELEASE</spring-cloud.version>
 	</properties>
-    
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-client -->
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-config-client</artifactId>
-		    <version>2.1.0.RELEASE</version>
-		</dependency>
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-sleuth</artifactId>
-		    <version>2.1.0.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zipkin</artifactId>
-		    <version>2.1.0.RELEASE</version>
-		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		    <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		    <version>2.1.0.RELEASE</version>
 		</dependency>
-		
 	</dependencies>
 
 	<build>

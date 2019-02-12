@@ -1,0 +1,3 @@
+server.port=8082
+# context path is servlet-specific config, not used for webflux
+#server.servlet.context-path=/sd
