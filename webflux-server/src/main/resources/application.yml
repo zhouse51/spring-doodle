@@ -1,0 +1,12 @@
+server:
+    port: 8080
+# context path is servlet-specific config, not used for webflux
+#server.servlet.context-path=/sd
+
+
+#greeting: Hello
+#greetings:
+#  EN: Hello
+#  ES: Hola
+#  DE: Hallo
+  

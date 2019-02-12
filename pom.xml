@@ -23,6 +23,9 @@
 
 	<modules>
 		<module>webflux-server</module>
+		<module>greeting-cloud</module>
+		<module>name-cloud</module>
+		<module>web-cloud</module>
 		<!--
 		<module>eureka-server</module>
 		<module>service-hi</module>

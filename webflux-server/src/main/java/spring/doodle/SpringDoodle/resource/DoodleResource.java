@@ -20,7 +20,7 @@ public class DoodleResource {
 	
 	@GetMapping(path="/process/{data}", produces = "application/json")
 	public String process(@PathVariable("data") String data) {
-		return service.processData(data);
+		return service.processData(data + " " );
 	}
 	
 	@GetMapping("/random/{seed}")

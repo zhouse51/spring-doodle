@@ -1,15 +1,16 @@
-package spring.doodle.SpringDoodle;
+package spring.doodle.cloud.name;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
-public class SpringDoodleApplication {
+@EnableConfigurationProperties(NameProperties.class)
+public class NameApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringDoodleApplication.class, args);
+		SpringApplication.run(NameApplication.class, args);
 	}
-
+	
 }
 

@@ -9,12 +9,11 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import spring.doodle.SpringDoodle.data.GirlProperties;
 
 public class DoodleService {
+	
 	public String processData(String data) {
-		GirlProperties g = new GirlProperties();
-		return "processed data in service: " + data + " " + g.getName();
+		return "processed data in service: " + data;
 	}
 
 	public Mono<String> findOne(String id) {
