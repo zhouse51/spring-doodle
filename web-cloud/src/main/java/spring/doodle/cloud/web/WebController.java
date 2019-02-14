@@ -5,29 +5,29 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.RequestContextUtils;
-
-import rx.Completable;
 
 @RestController
 public class WebController {
 	private static final Logger LOG = Logger.getLogger(WebController.class.getName());
 	
+	@Autowired
 	private GreetingService greetingService;
+	@Autowired
 	private NameService nameService;
 	
 
-	public WebController(NameService nameService, GreetingService greetingService) {
-		this.greetingService = greetingService;
-		this.nameService = nameService;
-	}
+//	public WebController(NameService nameService, GreetingService greetingService) {
+//		this.greetingService = greetingService;
+//		this.nameService = nameService;
+//	}
 
 	@RequestMapping("/bio")
 	public String indexBio(HttpServletRequest request) {

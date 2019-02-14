@@ -5,18 +5,19 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class GreetingService {
-	private static final String URL = "http://localhost:9099";
-	private RestTemplate rest;
+	private static final String URL = "http://GREETING";
+	
+	private RestTemplate restTemplate;
 
-	public GreetingService(RestTemplate rest) {
-		this.rest = rest;
+	public GreetingService(RestTemplate restTemplate) {
+		this.restTemplate = restTemplate;
 	}
 
 	public String getGreeting() {
-		return rest.getForObject(URL, String.class);
+		return restTemplate.getForObject(URL, String.class);
 	}
 
 	public String getGreeting(String locale) {
-		return rest.getForObject(new StringBuilder().append(URL).append("/").append(locale).toString(), String.class);
+		return restTemplate.getForObject(new StringBuilder().append(URL).append("/").append(locale).toString(), String.class);
 	}
 }

@@ -29,6 +29,7 @@
 		<module>eureka-server-cloud</module>
 		<module>config-server-cloud</module>
 		<module>zipkin-server-cloud</module>
+		<module>zuul-server-cloud</module>
 	</modules>
     
 	<dependencies>
