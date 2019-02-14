@@ -28,6 +28,7 @@
 		<module>web-cloud</module>
 		<module>eureka-server-cloud</module>
 		<module>config-server-cloud</module>
+		<module>zipkin-server-cloud</module>
 	</modules>
     
 	<dependencies>

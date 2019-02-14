@@ -6,16 +6,16 @@
 	<parent>
         <groupId>spring.doodle</groupId>
         <artifactId>SpringDoodle</artifactId>
-        <version>0.0.1SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 	
-	<groupId>spring.doodle.cloud.greeting</groupId>
-	<artifactId>greeting-cloud</artifactId>
-	<version>0.0.1-greeting-SNAPSHOT</version>
+	<groupId>spring.doodle.cloud.zipkin</groupId>
+	<artifactId>zipkin-server-cloud</artifactId>
+	<version>0.0.1-zipkin-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
-	<name>greeting-cloud</name>
-	<description>Demo project for Spring cloud</description>
+	<name>zipkin-server-cloud</name>
+	<description>Demo project for zipkin server</description>
 
 	<properties>
 		<spring-cloud.version>2.1.0.RELEASE</spring-cloud.version>
@@ -27,22 +27,18 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-client -->
 		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-config-client</artifactId>
-		    <version>2.1.0.RELEASE</version>
+		    <groupId>io.zipkin.java</groupId>
+		    <artifactId>zipkin-server</artifactId>
+		    <version>2.12.1</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-sleuth</artifactId>
-		    <version>2.1.0.RELEASE</version>
+		    <groupId>io.zipkin.java</groupId>
+		    <artifactId>zipkin-autoconfigure-ui</artifactId>
+		    <version>2.12.1</version>
+		    <scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zipkin</artifactId>
-		    <version>2.1.0.RELEASE</version>
-		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
@@ -50,12 +46,6 @@
 		    <version>2.1.0.RELEASE</version>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-zipkin</artifactId>
-		    <version>2.1.0.RELEASE</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>

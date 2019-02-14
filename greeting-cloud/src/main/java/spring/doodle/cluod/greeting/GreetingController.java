@@ -21,12 +21,24 @@ public class GreetingController {
 	public String getGreeting(@PathVariable String languageCode){
 		LOG.info("Language Code: " + languageCode);
 		LOG.info("Greeting: " + greetingProperties.getGreetings().get(languageCode.toUpperCase()));
+		try {
+			Thread.sleep(300);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return greetingProperties.getGreetings().getOrDefault(languageCode.toUpperCase(), greetingProperties.getGreeting());
 	}
 
 	@RequestMapping("/")
 	public String getGreeting(){
 		LOG.info("Greeting: " + greetingProperties.getGreeting());
+		try {
+			Thread.sleep(300);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return greetingProperties.getGreeting();
 	}
 }

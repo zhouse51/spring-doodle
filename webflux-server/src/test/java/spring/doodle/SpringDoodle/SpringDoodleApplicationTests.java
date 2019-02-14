@@ -92,13 +92,17 @@ public class SpringDoodleApplicationTests {
 			System.out.println(l + ": step 6, finish up in another thread.");
 		});
 		
+		// return a nested future Future<Future<T>>
 		getUsersDetail("8888")
 			.thenApply(u -> getCreditRating(u));
 		
+		
+		// return a future Future<T>
 		getUsersDetail("9999")
 			.thenCompose(u -> getCreditRating(u));
 		
 		
+		// combine two future results
 		try {
 			int r = weight1().thenCombine(weight2(), (i1, i2) -> {
 				return i1 + i2;

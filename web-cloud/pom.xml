@@ -9,23 +9,47 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 	
-	<groupId>spring.doodle</groupId>
+	<groupId>spring.doodle.cloud.web</groupId>
 	<artifactId>web-cloud</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-web-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
 	<name>web-cloud</name>
 	<description>Demo project for Spring flux and java async processes</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
-    
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-sleuth</artifactId>
+		    <version>2.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		    <version>2.1.0.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		    <version>2.1.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		    <version>2.1.0.RELEASE</version>
+		</dependency>		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		    <version>2.1.0.RELEASE</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
