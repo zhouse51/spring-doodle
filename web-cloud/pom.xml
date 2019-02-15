@@ -39,11 +39,13 @@
 		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		    <version>2.1.0.RELEASE</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-		    <version>2.1.0.RELEASE</version>
-		</dependency>		
+		
+<!-- 	feign includes ribbon -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.cloud</groupId> -->
+<!-- 			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId> -->
+<!-- 		    <version>2.1.0.RELEASE</version> -->
+<!-- 		</dependency>		 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
@@ -59,8 +61,12 @@
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		    <version>2.1.0.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+		    <version>2.1.0.RELEASE</version>
+		</dependency>
 
-		
 	</dependencies>
 
 	<build>

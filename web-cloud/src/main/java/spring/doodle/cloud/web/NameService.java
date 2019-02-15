@@ -16,7 +16,9 @@ public class NameService {
 		return nameFeignClient.getName();
 	}
 	
-	@FeignClient("name")
+	// feign client.
+	// enable feign hystrix configuration 
+	@FeignClient(value = "name",fallback = NameFeignHystricClient.class)
 	static interface NameFeignClient {
 		@RequestMapping("/")
 		public String getName();

@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -13,6 +15,8 @@ import brave.sampler.Sampler;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableHystrix
+@EnableHystrixDashboard
 public class WebApplication {
 
 	public static void main(String[] args) {
@@ -26,6 +30,8 @@ public class WebApplication {
 			return Sampler.ALWAYS_SAMPLE;
 		}
 		
+		// use ribbon for load balance
+		// check NameService for the sample using feign client
 		@Bean
 		@LoadBalanced
 		public RestTemplate restTemplate() {
