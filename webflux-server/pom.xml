@@ -9,17 +9,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 	
-	<groupId>spring.doodle</groupId>
+	<groupId>spring.doodle.webflux</groupId>
 	<artifactId>webflux-server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-webflux-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
 	<name>webflux-server</name>
 	<description>Demo project for Spring flux and java async processes</description>
-
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
     
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux -->

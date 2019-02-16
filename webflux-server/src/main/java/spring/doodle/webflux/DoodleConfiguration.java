@@ -1,10 +1,10 @@
-package spring.doodle.SpringDoodle;
+package spring.doodle.webflux;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import spring.doodle.SpringDoodle.service.DoodleService;
+import spring.doodle.webflux.service.DoodleService;
 
 @Configuration
 @ComponentScan(value={"spring.doodle.SpringDoodle.service"})

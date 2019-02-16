@@ -1,4 +1,4 @@
-package spring.doodle.SpringDoodle.resource;
+package spring.doodle.webflux.resource;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import spring.doodle.SpringDoodle.service.DoodleService;
+import spring.doodle.webflux.service.DoodleService;
 
 @RestController
 @RequestMapping(path = "/api")

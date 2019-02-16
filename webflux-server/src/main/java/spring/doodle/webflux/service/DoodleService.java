@@ -1,4 +1,4 @@
-package spring.doodle.SpringDoodle.service;
+package spring.doodle.webflux.service;
 
 import java.time.Duration;
 import java.util.Date;
