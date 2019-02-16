@@ -1,3 +1,6 @@
+server:
+  port: 7070
+  
 spring:
   application:
     name: name
@@ -8,7 +11,14 @@ spring:
   zipkin:
     base-url: http://localhost:9411
 #      uri: http://localhost:8888/ # single config-servrer configuration
-
+  bus:
+    enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
 eureka:
   client:
     serviceUrl:

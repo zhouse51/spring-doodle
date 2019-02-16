@@ -4,7 +4,7 @@ import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties()
+@ConfigurationProperties
 public class GreetingProperties {
 	String greeting;
 	Map<String, String> greetings;

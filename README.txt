@@ -17,5 +17,24 @@ Demo Features includes:
 	Zipkin/Sleuth:	tracing service, central log
 	Zuul:			routing/filting, routing perform like nginx (reverse proxy)
 	Ribbon:			work with Euerka to enable the load balance in the server.
-	Feign:			
-	Hystrix:		circet breaker
+	Feign:			load balance
+	Hystrix:		circuit breaker
+	Bus:			in this demo, I configured to use rabbitMQ as message queue service. Configure the config-server to broadcast the configuration updated message.
+					- start rabbitMQ server. Demo runs a docker image
+					- update configuration value in the git repository
+					- reload the configuration in config-server
+					- call <POST>/actuator/bus-refresh to the config-server to broadcast the message througth the MQ
+					
+Running sequence:
+1. start rubbitMQ docker container
+2. start eureka-server port: 8761
+3. start config-server x2 port: 8888, 8889
+4. start zipkin-server port: 9411
+5. start greeting x2 port: 9090, 9091
+6. start naming x2 port: 7070, 7071
+7. start web x2 port: 8080, 8081
+8. start zuul port 8769
+
+Test:
+1. circuit break: stop all name servrers. 
+2. central configuration: update configure value, commit to git, call <POST>/actuator/bus-refresh to the config-server

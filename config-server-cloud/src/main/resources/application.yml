@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8889
 
 spring:
   application:
@@ -13,7 +13,19 @@ spring:
           label: master
           username:
           password:
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#  stream:
+#    kafka:
+#      binder:
+#        zk-nodes: localhost:2181
+#        brokers: localhost:9092
+  bus:
+      enabled: true
+      
 eureka:
   client:
     serviceUrl:

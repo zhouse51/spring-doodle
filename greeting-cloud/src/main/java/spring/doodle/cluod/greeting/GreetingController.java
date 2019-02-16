@@ -3,11 +3,13 @@ package spring.doodle.cluod.greeting;
 
 import java.util.logging.Logger;
 
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RefreshScope
 public class GreetingController {
 	private static final Logger LOG = Logger.getLogger(GreetingController.class.getName());
 	
