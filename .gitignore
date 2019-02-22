@@ -3,3 +3,4 @@
 .project
 .classpath
 .externalToolBuilders/org.eclipse.m2e.core.maven2Builder.launch
+*.DS_Store

@@ -16,6 +16,9 @@ zuul:
     greeting:
       path: /**
       serviceId: greeting
+    profile:
+      path: /**
+      serviceId: profile
 
 eureka:
   client:

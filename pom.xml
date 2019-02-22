@@ -23,6 +23,7 @@
 
 	<modules>
 		<module>webflux-server</module>
+		<module>profile-cloud</module>
 		<module>greeting-cloud</module>
 		<module>name-cloud</module>
 		<module>web-cloud</module>

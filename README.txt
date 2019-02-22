@@ -1,11 +1,18 @@
 Spring Doodle is a personal project to learn Spring Boot related technology.
 
+******************
 Cloud Projects
+******************
 Cloud projects are simple demo to the Spring Cloud.
-The original demo is from: https://github.com/ryanjbaxter/beginners-guide-to-spring-cloud
-More references:
-	https://blog.csdn.net/forezp/article/details/70148833
 
+More references:
+	- The original demo
+	https://github.com/ryanjbaxter/beginners-guide-to-spring-cloud
+	- cloud full features
+	https://blog.csdn.net/forezp/article/details/70148833
+	- bus + kafka
+	https://my.oschina.net/u/2263272/blog/1634010
+	
 Demo Services:
 	Web: A front end service, calling Name service and Greeting service and return the combine the result.
 	Name: A service returns a name base on the configuration. Simulates 300ms process time.
@@ -26,10 +33,10 @@ Demo Features includes:
 					- call <POST>/actuator/bus-refresh to the config-server to broadcast the message througth the MQ
 					
 Running sequence:
-1. start rubbitMQ docker container
-2. start eureka-server port: 8761
-3. start config-server x2 port: 8888, 8889
-4. start zipkin-server port: 9411
+1. start rubbitMQ docker container - http://localhost:15672/#/ guest/guest
+2. start eureka-server port: 8761 - http://localhost:8761/
+3. start config-server x2 port: 8888, 8889 - http://localhost:8888/{service_name}/{property_name}
+4. start zipkin-server port: 9411 - http://localhost:9411/zipkin/
 5. start greeting x2 port: 9090, 9091
 6. start naming x2 port: 7070, 7071
 7. start web x2 port: 8080, 8081
@@ -38,3 +45,7 @@ Running sequence:
 Test:
 1. circuit break: stop all name servrers. 
 2. central configuration: update configure value, commit to git, call <POST>/actuator/bus-refresh to the config-server
+
+******************
+Webflux Projects
+******************

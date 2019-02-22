@@ -1,5 +1,5 @@
 server:
-  port: 7070
+  port: 7071
   
 spring:
   application:
@@ -8,16 +8,23 @@ spring:
     config:
       label: master
       profile: dev
+  sleuth: 
+    sampler: 
+       percentage: 1
   zipkin:
     base-url: http://localhost:9411
 #      uri: http://localhost:8888/ # single config-servrer configuration
   bus:
-    enabled: true
+    enabled: false
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
+
+feign:
+  hystrix:
+    enabled: false
     
 eureka:
   client:
