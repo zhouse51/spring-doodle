@@ -1,5 +1,6 @@
-greeting: Aloha
-greetings:
-  EN: Aloha
-  ES: Hola
-  DE: Hallo
+app:
+  greeting: Aloha
+  greetings:
+    EN: Aloha
+    ES: Hola
+    DE: Hallo
