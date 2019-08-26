@@ -1,0 +1,36 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: combined-server
+  profiles: peer1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    config:
+      label: master
+      profile: dev
+      server:
+        git:
+          uri: https://github.com/zhouse51/spring-doodle
+          searchPaths: cloud-config
+          username:
+          password:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
+eureka:
+  instance:
+    hostname: localhost
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+
+
