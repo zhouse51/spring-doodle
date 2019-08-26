@@ -26,8 +26,8 @@ Demo Features includes:
 					- call <POST>/actuator/bus-refresh to the config-server to broadcast the message througth the MQ
 					
 Running sequence:
-1. start rubbitMQ docker container
-2. start eureka-server port: 8761
+1. start rabbitMQ docker container
+2. start eureka-server port: 8761 http://localhost:8761/
 3. start config-server x2 port: 8888, 8889
 4. start zipkin-server port: 9411
 5. start greeting x2 port: 9090, 9091

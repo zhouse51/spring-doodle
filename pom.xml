@@ -30,6 +30,8 @@
 		<module>config-server-cloud</module>
 		<module>zipkin-server-cloud</module>
 		<module>zuul-server-cloud</module>
+		<module>combined-server-cloud</module>
+		<module>rabbitmq-tool</module>
 	</modules>
     
 	<dependencies>

@@ -1,0 +1,19 @@
+server:
+  port: 8010
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+javainuse:
+  rabbitmq:
+    exchange: javainuse.exchange
+    queue: javainuse.queue
+    routingKey: javainuse.routingkey
+
+logging:
+  level:
+    root: DEBUG
