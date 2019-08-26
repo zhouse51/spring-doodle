@@ -3,11 +3,13 @@ package spring.doodle.cluod.greeting;
 import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
-@ConfigurationProperties
+@Configuration
+@ConfigurationProperties(prefix = "app")
 public class GreetingProperties {
-	String greeting;
-	Map<String, String> greetings;
+	private String greeting;
+	private Map<String, String> greetings;
 
 	public String getGreeting() {
 		return greeting;

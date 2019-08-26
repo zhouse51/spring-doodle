@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import spring.doodle.webflux.service.DoodleService;
 
 @Configuration
-@ComponentScan(value={"spring.doodle.SpringDoodle.service"})
+@ComponentScan(value={"spring.doodle.webflux.service"})
 public class DoodleConfiguration {
 	@Bean
 	public DoodleService getMDoodleService(){

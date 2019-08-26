@@ -9,7 +9,7 @@ public class NameFeignHystricClient implements NameFeignClient {
 
 	@Override
 	public String getName() {
-		return "sorry no name found";
+		return "Name Out Of Service";
 	}
 
 }

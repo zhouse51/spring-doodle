@@ -49,7 +49,11 @@ public class WebController {
 	@RequestMapping("/nio")
 	public String indexNio(HttpServletRequest request) {
 		String locale = RequestContextUtils.getLocaleResolver(request).resolveLocale(request).toLanguageTag();
-		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+
+		}
 		Executor executor = Executors.newCachedThreadPool();
 		CompletableFuture<String> futureGreeting = CompletableFuture.supplyAsync(() -> {
 			return greetingService.getGreeting(locale);
